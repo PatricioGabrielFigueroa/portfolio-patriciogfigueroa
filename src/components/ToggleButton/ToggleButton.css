@@ -1,0 +1,120 @@
+/* Toggle Button */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 34px;
+    cursor: pointer;
+
+        /* 3D effect */
+        border-radius: 34px;
+        box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2), 
+                    inset 0 -4px 6px rgba(255, 255, 255, 0.3),
+                    0 2px 4px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+}
+
+/* Background (light/dark mode) */
+.sliderbutton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #73C0FC;
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+/* Toggle circle */
+.sliderbutton::before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: var(--orange);
+    transition: 0.4s;
+    z-index: 2;
+}
+
+/* Sun & Moon Icons */
+.sun svg {
+    position: absolute;
+    top: 6px;
+    left: 36px;
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.moon svg {
+    fill: #e3e5e7;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* Sun animation */
+.sun svg {
+    animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Moon animation */
+.moon svg {
+    animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Dark mode styles */
+.dark .sliderbutton {
+    background-color: #353535;
+}
+
+.dark .sliderbutton::before {
+    transform: translateX(30px);
+}
+
+.dark .sun svg {
+    opacity: 0;
+}
+
+.dark .moon svg {
+    opacity: 1;
+}
+
+/* Light mode styles */
+.light .sliderbutton {
+    background-color: #a3a3a3;
+}
+
+.light .sliderbutton::before {
+    transform: translateX(0);
+}
+
+.light .sun svg {
+    opacity: 1;
+}
+
+.light .moon svg {
+    opacity: 0;
+}

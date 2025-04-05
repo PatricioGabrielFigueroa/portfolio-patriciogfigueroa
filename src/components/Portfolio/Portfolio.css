@@ -1,0 +1,95 @@
+.p-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.portcard-o {
+  width: 190px;
+  height: 254px;
+  padding: 5px;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--orange);
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out, position 1s ease-in-out;
+  border-bottom: 4px solid var(--orange);
+}
+
+
+.portcard-o.expanded {
+  position: fixed;
+  top: 10vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 70vw; /* Expand to 70% of the viewport width */
+  height: 70vh; /* Expand to 70% of the viewport height */
+  margin: auto; /* Center it in the viewport */
+  z-index: 10; /* Ensure it's on top of other content */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out, margin 0.3s ease-in-out, position 1s ease-in-out;
+}
+
+.portcard-i {
+  background: #181818;
+  color: white;
+  display: flex;
+  flex-direction: column; /* Ensure child elements stack vertically */
+  justify-content: flex-start; /* Align content to the top */
+  align-items: center; /* Center horizontally */
+  height: 100%;
+  overflow: visible;
+  border-radius: .7rem;
+  position: relative; /* To position the close button correctly */
+  padding: 10px;
+}
+
+.porttext {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0; /* Remove default margin */
+  padding-bottom: 10px; /* Space between text and button */
+  text-align: center; /* Optionally center the text */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: var(--orange);
+}
+
+.portcard-o:hover {
+  transform: scale(1.02); /* Optional: Add hover effect to scale cards */
+}
+
+.portcard-o.expanded:hover {
+  transform: scale(1.00)
+}
+
+.portfolio-title {
+  font-weight: bold;
+  font-size: 3rem;
+  margin: 0.3rem auto; /* Centers it horizontally */
+}

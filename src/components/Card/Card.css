@@ -1,0 +1,38 @@
+.card {
+    width: 12rem;
+    height: 17rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+    background: var(--grayBG);
+    border: 7px solid var(--orange);
+    border-radius: 20px;
+    box-shadow: var(--boxShadow);
+    padding: 0px 26px 2rem 26px;
+}
+
+.card span:nth-of-type(2) {
+    color: var(--gray);
+    font-size: 0.7rem;
+}
+
+.card > img {
+    width: 100px;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 8rem;
+        height: 16rem;
+    }
+
+    .card span:nth-of-type(2) {
+        font-size: 0.5rem;
+        font-weight: bold;
+    }
+}
+

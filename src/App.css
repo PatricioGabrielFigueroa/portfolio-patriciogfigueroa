@@ -1,0 +1,124 @@
+:root {
+  --yellow: rgb(255, 118, 118);
+  --orange : rgba(205, 29, 29, 1); /*#FCA61F*/
+  --black : #242D49;
+  --gray : #788097;
+  --blueCard : #DDF8FE;
+  --purple: rgb(238 210 255);
+  --boxShadow : 0px 19px 60px rgb(0 0 0 / 8%);
+  --orangeCard: rgba(252, 166, 31, 0.45);
+  --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.App {
+  padding: 0.5rem 3.5rem;
+  overflow: hidden;
+  color: var(--black);
+}
+
+.btn {
+  padding: 11px 26px;
+  border-radius: 35px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  background: linear-gradient(180deg, rgba(224, 117, 117, 0.822) 26.71%, rgba(205, 29, 29, 1) 99.36%);
+  box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42);
+
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background: #FFF;
+  cursor: pointer;
+  color: var(--orange);
+  border: 1px solid var(--orange);
+  font-weight: bold;
+}
+
+/* Light & Dark Theme */
+
+.main.dark {
+  background: black;
+  color: white;
+}
+
+.App.dark {
+  color: white !important;
+}
+
+/* Transition Animation */
+.main {
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* Cubes Animation for the BG*/
+
+.hero {
+  position: relative;
+}
+
+.cube {
+  position: fixed;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px rgb(148, 21, 21); /* Use darkened blue manually or a fixed color */
+  border-radius: 20%;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 12s ease-in forwards infinite;
+  pointer-events: none;
+}
+
+.c1 {
+  animation-delay: 0s;
+}
+
+.c2 {
+  animation-delay: 2s;
+  left: 25vw;
+  top: 40vh;
+  border-color: rgb(235, 98, 98); /* Lighter blue */
+}
+
+.c3 {
+  animation-delay: 4s;
+  left: 75vw;
+  top: 50vh;
+}
+
+.c4 {
+  animation-delay: 6s;
+  left: 90vw;
+  top: 10vh;
+}
+
+.c5 {
+  animation-delay: 8s;
+  left: 10vw;
+  top: 85vh;
+}
+
+.c6 {
+  animation-delay: 10s;
+  left: 50vw;
+  top: 10vh;
+}
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+

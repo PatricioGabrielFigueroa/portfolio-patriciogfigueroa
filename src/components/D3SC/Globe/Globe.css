@@ -1,0 +1,13 @@
+.countries {
+    fill: greenyellow;
+    stroke: black;
+    stroke-width: 0.2;
+  }
+  
+  .countries:hover {
+    fill: white;
+  }
+  
+  .sphere {
+    fill: lightskyblue; /* Set the color of the sphere */
+  }

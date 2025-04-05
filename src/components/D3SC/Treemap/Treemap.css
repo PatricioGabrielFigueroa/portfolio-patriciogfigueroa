@@ -1,0 +1,51 @@
+.hm-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tooltip {
+    position: absolute; /* Positioning the tooltip relative to the viewport */
+    text-align: center; /* Center-aligning the text inside the tooltip */
+    padding: 8px; /* Adding some padding around the text */
+    font: 12px sans-serif; /* Font size and family */
+    background: rgba(0, 0, 0, 0.6); /* Dark background with some transparency */
+    color: white; /* Text color */
+    border-radius: 4px; /* Rounded corners */
+    pointer-events: none; /* Prevents the tooltip from interfering with mouse events */
+    /* transition: opacity 0.3s; Smooth transition for opacity */
+    opacity: 0; 
+    z-index: 10; /* Ensure the tooltip appears above other elements */
+  }
+
+  .hm-btn {
+    background-color: black;
+    color: white;
+    border: 0.5px solid rgba(255, 255, 255, 0.39);
+    border-radius: 2px;
+    box-shadow: 3px 3px 6px rgba(255, 255, 255, 0.829);
+    height: 1rem;
+    width: 10rem;
+    font-size: 0.6rem;
+  }
+
+  .hm-btn:active { /* Simulate button press */
+    box-shadow: inset 2px 2px 5px rgba(255, 254, 254, 0.8),
+                inset -2px -2px 5px rgba(78, 78, 78, 0.8);
+  }
+
+  .hm-container h3 { /* Select h1 and h3 inside .hm-container */
+    text-align: center; /* Center the text content */
+    width: 100%; /* optional: forces the text to center within the container's full width*/
+  }
+
+  .hm-title {
+    height: 0;
+  }
+
+  .hm-description {
+    height: 0;
+    margin-bottom: 1rem;
+    font-size: 10px;
+  }

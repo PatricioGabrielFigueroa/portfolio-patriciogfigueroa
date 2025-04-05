@@ -1,0 +1,18 @@
+.bar {
+    fill: lightcoral;
+  }
+  
+  
+  .bar:hover {
+    fill: red;
+  }
+  
+  .txt {
+    color: gray;
+    font-weight: bold;
+    font-size: 1vh;
+  }
+  
+  h1 {
+    margin-left: 35%;  
+  }
