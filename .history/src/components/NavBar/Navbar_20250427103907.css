@@ -63,7 +63,7 @@ a {
 }
 
 .n-list a {
-    color: inherit;
+    color: inherit; /* or choose your own like color: white; */
     text-decoration: none;
   }
 

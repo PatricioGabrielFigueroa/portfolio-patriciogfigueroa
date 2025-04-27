@@ -62,11 +62,6 @@ a {
     text-decoration: none;
 }
 
-.n-list a {
-    color: inherit;
-    text-decoration: none;
-  }
-
 a:visited {
     color:inherit;
 }
